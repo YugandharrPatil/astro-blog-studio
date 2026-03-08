@@ -1,0 +1,26 @@
+---
+import { Button } from "@/components/ui/button";
+import "../styles/global.css";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer.astro";
+import Tags from "@/components/tags.astro";
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | YugZ</title>
+	</head>
+	<body class="container mx-auto">
+		<Navbar />
+		<slot />
+		<!-- <Footer /> -->
+	</body>
+</html>

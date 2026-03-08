@@ -1,0 +1,17 @@
+---
+import Post from "@/components/post.astro";
+import Posts from "@/components/posts.astro";
+import Tags from "@/components/tags.astro";
+import Layout from "@/layouts/layout.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
+const tags = [...new Set(posts.flatMap((post) => post.data.tags))];
+
+const pathname = Astro.url.pathname;
+---
+
+<Layout>
+	<Tags />
+	<Posts posts={posts} />
+</Layout>
