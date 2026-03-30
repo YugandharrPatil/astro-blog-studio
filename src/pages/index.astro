@@ -4,9 +4,9 @@ import Layout from "@/layouts/layout.astro";
 import { getCollection } from "astro:content";
 
 const posts = await getCollection("blog");
-posts.forEach((post) => {
-	console.log(post.id);
-});
+// posts.forEach((post) => {
+// 	// console.log(post.id);
+// });
 
 const tags = [...new Set(posts.flatMap((post) => post.data.tags))];
 

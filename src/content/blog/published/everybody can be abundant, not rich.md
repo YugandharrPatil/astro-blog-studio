@@ -1,9 +1,10 @@
 ---
 title: everybody can be abundant, not rich
-length: 34
-tags:
-  - money
+subtitle: test subtitle for abundant, not rich
+tags: ["money"]
+slug: "abundance"
 ---
+
 when sir Naval Ravikant said: “Everybody can be rich”, here’s what he actually meant.
 
 ### not rich, but live in abundance

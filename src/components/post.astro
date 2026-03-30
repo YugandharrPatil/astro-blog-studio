@@ -5,10 +5,10 @@ const { post } = Astro.props as {
 import type { PostType } from "@/types";
 import { Card, CardContent } from "./ui/card";
 
-const isDraft = post.id.startsWith("drafts");
+const isDraft = post.filePath?.startsWith("src/content/blog/drafts");
 ---
 
-<a href={`/blog/${post.id}/`}>
+<a href={`/blog/${post.data.slug}/`}>
 	<Card className="hover:shadow-lg transition-all my-4">
 		<CardContent>
 			<h1 class="text-xl font-bold">{post.data.title}</h1>
@@ -16,5 +16,6 @@ const isDraft = post.id.startsWith("drafts");
 			<p class="text-sm mt-2 text-muted-foreground">Word Count: {post.data.length}</p>
 			<small class={isDraft ? "bg-yellow-500" : "bg-green-500"}>{isDraft ? "draft" : "published"}</small>
 		</CardContent>
+		<!-- {JSON.stringify(post)} -->
 	</Card>
 </a>

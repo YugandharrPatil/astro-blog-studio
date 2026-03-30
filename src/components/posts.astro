@@ -3,11 +3,20 @@ import type { PostType } from "@/types";
 import Post from "./post.astro";
 
 const { posts } = Astro.props;
+
+const sortedPosts = posts.sort((a: PostType, b: PostType) => {
+	const aPublished = a.filePath?.startsWith("src/content/blog/published");
+	const bPublished = b.filePath?.startsWith("src/content/blog/published");
+
+	if (aPublished && !bPublished) return -1;
+	if (!aPublished && bPublished) return 1;
+	return 0;
+});
 ---
 
 <div>
 	{
-		posts.map((post: PostType) => {
+		sortedPosts.map((post: PostType) => {
 			return <Post post={post} />;
 		})
 	}
