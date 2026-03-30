@@ -5,7 +5,9 @@ tags: ["money"]
 slug: "abundance"
 ---
 
-when sir Naval Ravikant said: “Everybody can be rich”, here’s what he actually meant.
+# coming soon...
+
+<!-- when sir Naval Ravikant said: “Everybody can be rich”, here’s what he actually meant.
 
 ### not rich, but live in abundance
 
@@ -21,4 +23,4 @@ to drive the wheel of technology forward. combined efforts of thousand and milli
 
 the status signally will still be there. there will still be signalling goods that only a few will be about to afford (because that is how the companies will price it so only a few can buy it) to show off their differenciability. luxury cars, luxury purses, luxury clothes, etc. like for example, in the olden days, the poor had horses and the rich had cars, but not it's the other way around.
 
-so what you really are getting is absolute abundance. you’re not getting richer than other people.
+so what you really are getting is absolute abundance. you’re not getting richer than other people. -->
