@@ -13,7 +13,9 @@ const isDraft = post.filePath?.startsWith("src/content/blog/drafts");
 		<CardContent>
 			<h1 class="text-xl font-bold">{post.data.title}</h1>
 			<h2 class="text-md text-muted-foreground">{post.data.subtitle}</h2>
-			<p class="text-sm mt-2 text-muted-foreground">Word Count: {post.data.length}</p>
+			<div class="flex gap-2">
+				{post.data.tags?.map((tag: string) => <span class="text-sm text-muted-foreground">{tag}</span>)}
+			</div>
 			<small class={isDraft ? "bg-yellow-500" : "bg-green-500"}>{isDraft ? "draft" : "published"}</small>
 		</CardContent>
 		<!-- {JSON.stringify(post)} -->
