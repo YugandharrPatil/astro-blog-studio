@@ -25,3 +25,4 @@ pnpm-debug.log*
 
 src/content/blog/.obsidian
 src/content/blog/drafts
+src/content/blog/upcoming
