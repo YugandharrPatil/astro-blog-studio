@@ -5,7 +5,7 @@ const { post } = Astro.props as {
 import type { PostType } from "@/types";
 import { Card, CardContent } from "./ui/card";
 
-const isDraft = post.filePath?.startsWith("src/content/blog/drafts");
+const isPublished = post.filePath?.startsWith("src/content/blog/published");
 ---
 
 <a href={`/blog/${post.data.slug}/`}>
@@ -16,7 +16,7 @@ const isDraft = post.filePath?.startsWith("src/content/blog/drafts");
 			<div class="flex gap-2">
 				{post.data.tags?.map((tag: string) => <span class="text-sm text-muted-foreground">{tag}</span>)}
 			</div>
-			<small class={isDraft ? "bg-yellow-500" : "bg-green-500"}>{isDraft ? "draft" : "published"}</small>
+			<small class={isPublished ? "bg-green-500" : "bg-yellow-500"}>{isPublished ? "published" : "draft"}</small>
 		</CardContent>
 		<!-- {JSON.stringify(post)} -->
 	</Card>
