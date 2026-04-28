@@ -1,7 +1,7 @@
 ---
 tags:
   - money
-  - hot🔥
+  - hot
 slug: leverage
 subtitle: leverage
 title: leverage
